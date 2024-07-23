@@ -35,7 +35,7 @@ jobs:
           generate-branches-badge: true
           fail-if-coverage-less-than: 50
           fail-if-branches-less-than: 50
-          jacoco-csv-file: Java/target/site/jacoco.csv
+          jacoco-csv-file: ./Java/target/site/jacoco.csv
 
       - name: Log coverage percentage
         run: |
