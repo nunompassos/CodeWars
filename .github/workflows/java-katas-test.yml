@@ -27,7 +27,7 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: mvn -B test
+        run: mvn -B package
 
       - name: Generate JaCoCo Badge
         uses: cicirello/jacoco-badge-generator@v2
@@ -35,7 +35,7 @@ jobs:
           generate-branches-badge: true
           fail-if-coverage-less-than: 50
           fail-if-branches-less-than: 50
-          jacoco-csv-file: ./target/site/jacoco/jacoco.csv
+          jacoco-csv-file: ./Java/target/site/jacoco/jacoco.csv
 
       - name: Log coverage percentage
         run: |
